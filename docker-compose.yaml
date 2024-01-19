@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_USER: user1
+      MYSQL_PASSWORD: votac@o
+      MYSQL_DATABASE: votacao
+      MYSQL_RANDOM_ROOT_PASSWORD: true
+    ports:
+      - "3306:3306"
+    volumes:
+      - /path/on/host:/var/lib/mysql
